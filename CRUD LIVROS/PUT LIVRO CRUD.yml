@@ -1,0 +1,23 @@
+info:
+  name: PUT LIVRO CRUD
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://localhost:3000/livros/1
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Dom Casmurro - Edição Atualizada",
+        "autor": "Machado de Assis",
+        "paginas": 300
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

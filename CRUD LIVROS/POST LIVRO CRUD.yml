@@ -1,0 +1,23 @@
+info:
+  name: POST LIVRO CRUD
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/livros
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "paginas": 256
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
