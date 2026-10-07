@@ -1,13 +1,20 @@
 import { Router, Request, Response } from "express";
 import { prisma } from "../prisma";
 
+import { buscaTodosAlunos } from "../Controle/AlunosControle";
+
 const router = Router();
 
+router.get("/", buscaTodosAlunos)
+
+
+
+/*
 router.get("/", async (req: Request, res: Response) => {
     const alunos = await prisma.alunos.findMany();
     res.status(200).json(alunos);
 });
-
+*/
 router.post("/", async (req: Request, res: Response) => {
     const {
         nome,
